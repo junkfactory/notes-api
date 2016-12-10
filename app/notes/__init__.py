@@ -1,3 +1,4 @@
+from flask import request
 import uuid
 
 schema = {
@@ -28,7 +29,6 @@ schema = {
     }
 }
 
-
 note = {
     'item_title': 'note',
     'cache_control': 'max-age=10,must-revalidate',
@@ -36,3 +36,13 @@ note = {
     'schema': schema,
     'resource_methods': ['GET', 'POST']
 }
+
+
+def pre_insert_notes(notes):
+    if request.authorization:
+        username = request.authorization.username
+    else:
+        username = 'SYSTEM'
+
+    for n in notes:
+        n['created_by'] = username
