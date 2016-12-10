@@ -6,7 +6,7 @@ schema = {
         "type": "string",
         "minlength": 1,
         "maxlength": 36,
-        "default": uuid.uuid4().get_hex()
+        "default": uuid.uuid4().hex
     },
     "entity_id": {
         "type": "string",

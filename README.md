@@ -47,3 +47,14 @@ curl -H 'Content-type: application/json' -X PUT 'http://127.0.0.1:5000/notes/584
     "entity_note" : "This is a notesssss"
 }'
 ```
+# Setup Dev Environment
+Create python virtualenv and install eve
+```bash
+$ mkdir eve
+$ cd eve
+$ virtualenv venv
+$ . venv/bin/activate
+New python executable in venv/bin/python
+
+$ pip install git+git://github.com/nicolaiarocci/eve.git
+```
