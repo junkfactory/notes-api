@@ -5,7 +5,8 @@ DESCRIPTION = "Notes API"
 
 install_requires = [
     'eve>=0.7.dev0',
-    'Flask-Script>=2.0.5'
+    'Flask-Script>=2.0.5',
+    'Flask-Bootstrap>=3.3.7'
 ]
 
 dependency_links = [
